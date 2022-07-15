@@ -3,6 +3,7 @@ package models
 import (
 	"github.com/google/uuid"
 	"math/rand"
+	"time"
 )
 
 type Deck []Card
@@ -31,7 +32,15 @@ type DrawCardsResponseBody struct {
 }
 
 func (d Deck) Shuffle() {
-	rand.Shuffle(len(d), func(i, j int) {
-		d[i], d[j] = d[j], d[i]
-	})
+	r := rand.New(rand.NewSource(time.Now().Unix()))
+	// We start at the end of the slice, inserting our random
+	// values one at a time.
+	for idx := len(d); idx > 0; idx-- {
+		randomIndex := r.Intn(idx)
+		// We swap the value at index idx-1 and the random index
+		// to move our randomly chosen value to the end of the
+		// slice, and to move the value that was at idx-1 into our
+		// unshuffled portion of the slice.
+		d[idx-1], d[randomIndex] = d[randomIndex], d[idx-1]
+	}
 }
