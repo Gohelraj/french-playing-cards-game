@@ -99,9 +99,9 @@ func OpenDeck(c *gin.Context) {
 }
 
 func Draw(c *gin.Context) {
-	count, err := strconv.Atoi(c.DefaultQuery("count", "1"))
+	count, err := strconv.Atoi(c.DefaultQuery("count", ""))
 	if err != nil || count < 1 || count > constants.TotalValidCardsCount {
-		c.JSON(http.StatusBadRequest, gin.H{"error": fmt.Sprintf("number of cards must be specified and be between 1 and %d", constants.TotalValidCardsCount)})
+		c.JSON(http.StatusBadRequest, gin.H{"error": fmt.Sprintf("count must be specified and must be between 1 and %d", constants.TotalValidCardsCount)})
 		return
 	}
 
