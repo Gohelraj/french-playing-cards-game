@@ -1,0 +1,9 @@
+# Editor(VS & goland)
+**/.history/**
+**/.idea/**
+**/.vscode/**
+
+vendor/
+.env
+test_cases.db
+cards.db

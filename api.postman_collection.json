@@ -1,0 +1,417 @@
+{
+	"info": {
+		"_postman_id": "3605a9f2-f8d6-49b2-b3af-117598fb262a",
+		"name": "French Playing Cards Game",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4992771"
+	},
+	"item": [
+		{
+			"name": "Create Deck",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/deck",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"deck"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Deck",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/deck",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"deck"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 15 Jul 2022 09:08:14 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "82"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"deck_id\": \"891aed93-a987-4a0c-b645-13edc81a448f\",\n    \"shuffled\": false,\n    \"remaining\": 52\n}"
+				}
+			]
+		},
+		{
+			"name": "Create Deck With Shuffle",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/deck?shuffle=true",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"deck"
+					],
+					"query": [
+						{
+							"key": "shuffle",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Deck With Shuffle",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/deck?shuffle=true",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"deck"
+							],
+							"query": [
+								{
+									"key": "shuffle",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 15 Jul 2022 09:08:51 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "81"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"deck_id\": \"4e31d3f7-7f0b-4261-88b1-a2fa4d2c123f\",\n    \"shuffled\": true,\n    \"remaining\": 52\n}"
+				}
+			]
+		},
+		{
+			"name": "Create Deck With Custom Cards",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/deck?cards=AS,KD,AC,2C,KH,9H,1D",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"deck"
+					],
+					"query": [
+						{
+							"key": "cards",
+							"value": "AS,KD,AC,2C,KH,9H,1D"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Deck With Custom Cards",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/deck?cards=AS,KD,AC,2C,KH,9H,1D",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"deck"
+							],
+							"query": [
+								{
+									"key": "cards",
+									"value": "AS,KD,AC,2C,KH,9H,1D"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 15 Jul 2022 09:09:34 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "81"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"deck_id\": \"b62193af-ab05-47dd-a2bf-63f4237b16af\",\n    \"shuffled\": false,\n    \"remaining\": 7\n}"
+				}
+			]
+		},
+		{
+			"name": "Create Deck With Shuffled Custom Cards",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/deck?shuffle=true&cards=AS,KD,AC,2C,KH,9H,1D",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"deck"
+					],
+					"query": [
+						{
+							"key": "shuffle",
+							"value": "true"
+						},
+						{
+							"key": "cards",
+							"value": "AS,KD,AC,2C,KH,9H,1D"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Deck With Shuffled Custom Cards",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/deck?shuffle=true&cards=AS,KD,AC,2C,KH,9H,1D",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"deck"
+							],
+							"query": [
+								{
+									"key": "shuffle",
+									"value": "true"
+								},
+								{
+									"key": "cards",
+									"value": "AS,KD,AC,2C,KH,9H,1D"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 15 Jul 2022 09:11:05 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "80"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"deck_id\": \"c9a5e580-7970-48c5-b0a6-1003f019a400\",\n    \"shuffled\": true,\n    \"remaining\": 7\n}"
+				}
+			]
+		},
+		{
+			"name": "Open Deck",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/deck/4e31d3f7-7f0b-4261-88b1-a2fa4d2c123f",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"deck",
+						"4e31d3f7-7f0b-4261-88b1-a2fa4d2c123f"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Open Deck",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/deck/891aed93-a987-4a0c-b645-13edc81a448f",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"deck",
+								"891aed93-a987-4a0c-b645-13edc81a448f"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 15 Jul 2022 09:11:41 GMT"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"deck_id\": \"891aed93-a987-4a0c-b645-13edc81a448f\",\n    \"shuffled\": false,\n    \"remaining\": 52,\n    \"cards\": [\n        {\n            \"value\": \"ACE\",\n            \"suit\": \"SPADES\",\n            \"code\": \"AS\"\n        },\n        {\n            \"value\": \"2\",\n            \"suit\": \"SPADES\",\n            \"code\": \"2S\"\n        },\n        {\n            \"value\": \"3\",\n            \"suit\": \"SPADES\",\n            \"code\": \"3S\"\n        },\n        {\n            \"value\": \"4\",\n            \"suit\": \"SPADES\",\n            \"code\": \"4S\"\n        },\n        {\n            \"value\": \"5\",\n            \"suit\": \"SPADES\",\n            \"code\": \"5S\"\n        },\n        {\n            \"value\": \"6\",\n            \"suit\": \"SPADES\",\n            \"code\": \"6S\"\n        },\n        {\n            \"value\": \"7\",\n            \"suit\": \"SPADES\",\n            \"code\": \"7S\"\n        },\n        {\n            \"value\": \"8\",\n            \"suit\": \"SPADES\",\n            \"code\": \"8S\"\n        },\n        {\n            \"value\": \"9\",\n            \"suit\": \"SPADES\",\n            \"code\": \"9S\"\n        },\n        {\n            \"value\": \"10\",\n            \"suit\": \"SPADES\",\n            \"code\": \"1S\"\n        },\n        {\n            \"value\": \"JACK\",\n            \"suit\": \"SPADES\",\n            \"code\": \"JS\"\n        },\n        {\n            \"value\": \"QUEEN\",\n            \"suit\": \"SPADES\",\n            \"code\": \"QS\"\n        },\n        {\n            \"value\": \"KING\",\n            \"suit\": \"SPADES\",\n            \"code\": \"KS\"\n        },\n        {\n            \"value\": \"ACE\",\n            \"suit\": \"DIAMONDS\",\n            \"code\": \"AD\"\n        },\n        {\n            \"value\": \"2\",\n            \"suit\": \"DIAMONDS\",\n            \"code\": \"2D\"\n        },\n        {\n            \"value\": \"3\",\n            \"suit\": \"DIAMONDS\",\n            \"code\": \"3D\"\n        },\n        {\n            \"value\": \"4\",\n            \"suit\": \"DIAMONDS\",\n            \"code\": \"4D\"\n        },\n        {\n            \"value\": \"5\",\n            \"suit\": \"DIAMONDS\",\n            \"code\": \"5D\"\n        },\n        {\n            \"value\": \"6\",\n            \"suit\": \"DIAMONDS\",\n            \"code\": \"6D\"\n        },\n        {\n            \"value\": \"7\",\n            \"suit\": \"DIAMONDS\",\n            \"code\": \"7D\"\n        },\n        {\n            \"value\": \"8\",\n            \"suit\": \"DIAMONDS\",\n            \"code\": \"8D\"\n        },\n        {\n            \"value\": \"9\",\n            \"suit\": \"DIAMONDS\",\n            \"code\": \"9D\"\n        },\n        {\n            \"value\": \"10\",\n            \"suit\": \"DIAMONDS\",\n            \"code\": \"1D\"\n        },\n        {\n            \"value\": \"JACK\",\n            \"suit\": \"DIAMONDS\",\n            \"code\": \"JD\"\n        },\n        {\n            \"value\": \"QUEEN\",\n            \"suit\": \"DIAMONDS\",\n            \"code\": \"QD\"\n        },\n        {\n            \"value\": \"KING\",\n            \"suit\": \"DIAMONDS\",\n            \"code\": \"KD\"\n        },\n        {\n            \"value\": \"ACE\",\n            \"suit\": \"CLUBS\",\n            \"code\": \"AC\"\n        },\n        {\n            \"value\": \"2\",\n            \"suit\": \"CLUBS\",\n            \"code\": \"2C\"\n        },\n        {\n            \"value\": \"3\",\n            \"suit\": \"CLUBS\",\n            \"code\": \"3C\"\n        },\n        {\n            \"value\": \"4\",\n            \"suit\": \"CLUBS\",\n            \"code\": \"4C\"\n        },\n        {\n            \"value\": \"5\",\n            \"suit\": \"CLUBS\",\n            \"code\": \"5C\"\n        },\n        {\n            \"value\": \"6\",\n            \"suit\": \"CLUBS\",\n            \"code\": \"6C\"\n        },\n        {\n            \"value\": \"7\",\n            \"suit\": \"CLUBS\",\n            \"code\": \"7C\"\n        },\n        {\n            \"value\": \"8\",\n            \"suit\": \"CLUBS\",\n            \"code\": \"8C\"\n        },\n        {\n            \"value\": \"9\",\n            \"suit\": \"CLUBS\",\n            \"code\": \"9C\"\n        },\n        {\n            \"value\": \"10\",\n            \"suit\": \"CLUBS\",\n            \"code\": \"1C\"\n        },\n        {\n            \"value\": \"JACK\",\n            \"suit\": \"CLUBS\",\n            \"code\": \"JC\"\n        },\n        {\n            \"value\": \"QUEEN\",\n            \"suit\": \"CLUBS\",\n            \"code\": \"QC\"\n        },\n        {\n            \"value\": \"KING\",\n            \"suit\": \"CLUBS\",\n            \"code\": \"KC\"\n        },\n        {\n            \"value\": \"ACE\",\n            \"suit\": \"HEARTS\",\n            \"code\": \"AH\"\n        },\n        {\n            \"value\": \"2\",\n            \"suit\": \"HEARTS\",\n            \"code\": \"2H\"\n        },\n        {\n            \"value\": \"3\",\n            \"suit\": \"HEARTS\",\n            \"code\": \"3H\"\n        },\n        {\n            \"value\": \"4\",\n            \"suit\": \"HEARTS\",\n            \"code\": \"4H\"\n        },\n        {\n            \"value\": \"5\",\n            \"suit\": \"HEARTS\",\n            \"code\": \"5H\"\n        },\n        {\n            \"value\": \"6\",\n            \"suit\": \"HEARTS\",\n            \"code\": \"6H\"\n        },\n        {\n            \"value\": \"7\",\n            \"suit\": \"HEARTS\",\n            \"code\": \"7H\"\n        },\n        {\n            \"value\": \"8\",\n            \"suit\": \"HEARTS\",\n            \"code\": \"8H\"\n        },\n        {\n            \"value\": \"9\",\n            \"suit\": \"HEARTS\",\n            \"code\": \"9H\"\n        },\n        {\n            \"value\": \"10\",\n            \"suit\": \"HEARTS\",\n            \"code\": \"1H\"\n        },\n        {\n            \"value\": \"JACK\",\n            \"suit\": \"HEARTS\",\n            \"code\": \"JH\"\n        },\n        {\n            \"value\": \"QUEEN\",\n            \"suit\": \"HEARTS\",\n            \"code\": \"QH\"\n        },\n        {\n            \"value\": \"KING\",\n            \"suit\": \"HEARTS\",\n            \"code\": \"KH\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Draw Cards From Deck",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/deck/4e31d3f7-7f0b-4261-88b1-a2fa4d2c123f/draw?count=3",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"deck",
+						"4e31d3f7-7f0b-4261-88b1-a2fa4d2c123f",
+						"draw"
+					],
+					"query": [
+						{
+							"key": "count",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Draw Cards From Deck",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/deck/4e31d3f7-7f0b-4261-88b1-a2fa4d2c123f/draw?count=3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"deck",
+								"4e31d3f7-7f0b-4261-88b1-a2fa4d2c123f",
+								"draw"
+							],
+							"query": [
+								{
+									"key": "count",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 15 Jul 2022 09:41:26 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "141"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"cards\": [\n        {\n            \"value\": \"7\",\n            \"suit\": \"SPADES\",\n            \"code\": \"7S\"\n        },\n        {\n            \"value\": \"KING\",\n            \"suit\": \"CLUBS\",\n            \"code\": \"KC\"\n        },\n        {\n            \"value\": \"ACE\",\n            \"suit\": \"SPADES\",\n            \"code\": \"AS\"\n        }\n    ]\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:3220",
+			"type": "string"
+		}
+	]
+}
