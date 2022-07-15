@@ -2,7 +2,7 @@
 
 > REST API to create and interact with decks of playing cards.
 
-The goal of the programme is to create an API that can create decks of playing cards. \
+The goal of the program is to create an API that can create decks of playing cards. \
 Cards from those decks can be requested and viewed.\
 Additionally, cards can be drawn from a deck (removing the card and leaving the remaining cards in the deck).
 # Tech Stack
