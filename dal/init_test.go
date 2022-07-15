@@ -11,7 +11,7 @@ import (
 var testDB *sql.DB
 
 func TestMain(m *testing.M) {
-	os.Remove("../../test_cases.db")
+	os.Remove("../test_cases.db")
 
 	testDB = ConnectTestDB()
 
@@ -27,7 +27,7 @@ func TestMain(m *testing.M) {
 }
 
 func ConnectTestDB() *sql.DB {
-	db, err := sql.Open("sqlite3", "../../test_cases.db")
+	db, err := sql.Open("sqlite3", "../test_cases.db")
 	if err != nil {
 		log.Fatal(err)
 	}
